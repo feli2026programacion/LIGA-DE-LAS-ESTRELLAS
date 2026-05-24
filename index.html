@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 10px;
+  }
+  th {
+    background-color: #f2f2f2;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<table>
+  <thead>
+    <!-- Primera fila de encabezados agrupados -->
+    <tr>
+      <th colspan="2">Tablas</th>
+      <th colspan="3">Reglas</th>
+    </tr>
+    <!-- Segunda fila de encabezados específicos -->
+    <tr>
+      <th>Padre</th>
+      <th>Hijo</th>
+      <th>Inserción</th>
+      <th>Modificación</th>
+      <th>Borrado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Fila de datos -->
+    <tr>
+      <td>Torneo</td>
+      <td>Temporada</td>
+      <td>Restringir No puedes crear la temporada "2027" si antes no has creado el torneo "invierno 2027". Primero debe existir el torneo</td>
+      <td>Cascada  Si cambias el nombre del torneo de "invierno 2027" a "verano 2027", todas sus temporadas se actualizarán solas para mostrar que pertenecen al nuevo nombre. </td>
+      <td>Restringir Dariate dará un error si intentas borrar el torneo "verano 2027" mientras sigan guardadas las temporadas "2025", "2026" o "2027"</td>
+    </tr>
+    <tr>
+      <td>Temporada</td>
+      <td>Grupo</td>
+      <td>Restringir No puedo crear un "Grupo A" O "Grupo E" si no existe una Temporada donde se organice la competencia .</td>
+      <td>Cascada Si se cambia el nombre a la Temporada26 a Temporada2026, ese cambio se actualiza automáticamente en los Grupos relacionados. </td>
+      <td>Restringir No puedes borrar la temporada "Verano 2027" si todavía tiene adentro el "Grupo Único de Competencia" </td>
+    </tr>
+    <tr>
+      <td>Temporada</td>
+      <td>traspaso</td>
+      <td>Restringir No puedes registrar el pase del jugador Carlos Tevez si no seleccionas una temporada existen. </td>
+      <td>Cascada Si cambio el estado de la Temporada (por ejemplo de “en curso” a “finalizada”), esa información se actualiza automáticamente en los Traspasos de jugadores, para mantener el control del período de movimientos.</td>
+      <td>Restringir  No puedes eliminar la temporada "Año 2024" porque borrarías el historial de dónde se transfirió a Joquin Campos ese año.. </td>
+    </tr>
+     <tr>
+      <td>Torneo</td>
+      <td>traspaso</td>
+      <td>Restringir No puedo registrar un Traspaso de un jugador si no existe un Torneo donde se esté disputando la competencia. </td>
+      <td>Cascada Si el torneo cambia el nombre "Torneo Águila" a "Torneo raton", el registro del traspaso de Pablo Rodríguez se actualizará automáticamente para decir que se realizó bajo el nuevo nombre . </td>
+      <td>Restringir No puedo eliminar un Torneo si ya existen Traspasos de jugadores registrados, porque forman parte del historial del campeonato. </td>
+    </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>
