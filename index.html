@@ -124,6 +124,27 @@
       <td>Cascada Cualquier cambio en las fechas de la temporada padre se actualiza automáticamente en los registros de las planillas de juego hijo.</td>
       <td>Restringir No podés borrar una temporada vieja (como el "Año 2025") si todavía tiene adentro guardadas las listas de quiénes jugaron ese año.</td>
     </tr>
+    <tr>
+      <td>categorias</td>
+      <td>torneos</td>
+      <td>Restringir: no se puede registrar un torneo si la categoría asociada no existe en el sistema.</td>
+      <td>Cascada: cualquier modificación que se haga actualizara automáticamente en los torneos relacionados.</td>
+      <td>Restringir: no se puede eliminar una categoría si existen torneos asociados a ella.</td>
+    </tr>
+    <tr>
+      <td>tipos de torneos</td>
+      <td>torneos</td>
+      <td>Restringir: no se puede crear un torneo sin especificar un tipo de torneo válido registrado previamente.</td>
+      <td>Cascada: si se modifica la información del tipo de torneo, los cambios se reflejan automáticamente en los torneos relacionados.</td>
+      <td>Restringir: no se puede eliminar un tipo de torneo mientras existan torneos vinculados a ese tipo.</td>
+    </tr>
+    <tr>
+      <td>predios</td>
+      <td>partidos</td>
+      <td>Restringir:no puedes agregar un partido si no tienes un predio donde se jugara el partido</td>
+      <td>Cascada:cualquier modificación en los datos del predio (nombre, dirección o disponibilidad) se actualiza automáticamente en los partidos asociados.</td>
+      <td>Restringir: no se puede borrar un predio si es que hay partidos que se juegan en ese predio</td>
+    </tr>
 
   </tbody>
 </table>
