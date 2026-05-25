@@ -70,59 +70,59 @@
    <tr>
       <td>Premios_Grupales</td>
       <td>Premios_Equipos</td>
-      <td>Restringir No puedes asignarle un premio a un club si antes no creaste la definición o categoría del premio (como "Fair Play") en la tabla de premios grupales.</td>
-      <td>Cascada Si modificás el código de barra o identificador del premio grupal en la tabla padre, todas las copas asignadas a los equipos se actualizan solas.</td>
-      <td>Restringir No te deja eliminar el premio "Fair Play" de la lista maestra si ya figura que un equipo se lo ganó en campeonatos anteriores.</td>
+      <td>Restringir No podés entregarle el premio "Fair Play" a ningún club si antes no creaste ese premio en la lista de premios grupales.</td>
+      <td>Cascada Si le cambiás el código al premio "Fair Play" (por ejemplo de P01 a PREMIO-01), todas las copas que ya tienen los clubes se actualizan solas con el nuevo código.</td>
+      <td>Restringir El sistema te frena si querés borrar el premio "Fair Play" de la lista de opciones si ya figura que Boca o River se lo ganaron el año pasado.</td>
     </tr>
     <tr>
       <td>Premios_Individuales</td>
       <td>Premios_Jugadores</td>
-      <td>Restringir No podés registrar que un jugador ganó una distinción si el tipo de premio (ej. "Goleador Estrella") no existe en las listas del torneo.</td>
-      <td>Cascada Si el administrador corrige el nombre o código del premio individual, el cambio impacta de inmediato en el historial de los futbolistas premiados.</td>
-      <td>Restringir No podés borrar la categoría de premio "Mejor Arquero" de la tabla padre si ya hay jugadores que lo tienen guardado en sus estadísticas.</td>
+      <td>Restringir No podés registrar que un jugador ganó el premio "Goleador Estrella" si ese premio no existe todavía en la lista de trofeos individuales.</td>
+      <td>Cascada Si corregís el nombre del premio de "Goleador" a "Máximo Artillero", el cambio impacta al toque en la ficha de los jugadores que lo ganaron.</td>
+      <td>Restringir No podés eliminar el premio "Mejor Arquero" de la lista maestra si ya hay arqueros que lo tienen guardado en sus vitrinas personales.</td>
     </tr>
     <tr>
       <td>Equipos</td>
       <td>Premios_Equipos</td>
-      <td>Restringir No es posible otorgarle un trofeo a un equipo cuyo nombre o ID no esté registrado oficialmente en el sistema.</td>
-      <td>Cascada Si por algún cambio del sistema se modifica el identificador único de un equipo, sus trofeos ganados se reasocian automáticamente con su nuevo ID.</td>
-      <td>Restringir El sistema te bloquea si intentás eliminar por completo a un equipo que todavía tiene copas registradas en su vitrina.</td>
+      <td>Restringir No le podés dar una copa a un equipo "fantasma". El club (ej. "Central Norte") tiene que estar registrado oficialmente en la lista de equipos.</td>
+      <td>Cascada Si un equipo cambia de ID o de código interno, todos los trofeos que ganó en su historia se pasan automáticamente a su nuevo ID para no perderlos.</td>
+      <td>Restringir No podés borrar por completo a un equipo de la base de datos si todavía tiene copas cargadas. Primero tendrías que sacar sus copas.</td>
     </tr>
 
     <tr>
       <td>Jugadores</td>
       <td>Temporadas_Torneos_Grupos_Equipos_Jugadores</td>
-      <td>Restringir No podés anotar a un jugador en la planilla de buena fe del campeonato si sus datos personales no fueron dados de alta primero en la tabla de Jugadores.</td>
-      <td>Cascada Si se corrige el DNI o número de ficha del jugador en la tabla padre, su identidad se actualiza automáticamente en todas las listas de partidos donde participó.</td>
-      <td>Restringir Queda totalmente prohibido borrar a un jugador de la base de datos si ya figura que jugó partidos o estuvo inscripto en algún torneo.</td>
+      <td>Restringir No podés anotar a "Messi" en la lista de buena fe para jugar el torneo si antes no lo cargaste con su DNI en la tabla de Jugadores.</td>
+      <td>Cascada Si te equivocaste en el DNI de un jugador y lo corregís en su ficha, el DNI se acomoda solo en todas las planillas de partidos donde jugó.</td>
+      <td>Restringir El sistema no te deja borrar a un jugador de la base de datos si ya estuvo anotado para jugar un torneo, porque borrarías las planillas de esos partidos.</td>
     </tr>
     <tr>
       <td>Equipos</td>
       <td>Temporadas_Torneos_Grupos_Equipos_Jugadores</td>
-      <td>Restringir No podés registrar que un grupo de jugadores pertenece a un club si ese equipo no existe cargado en el sistema con su nombre oficial.</td>
-      <td>Cascada Si el club cambia de nombre o se corrige su número de personería jurídica, el cambio se pasa solo a todas las planillas de buena fe del torneo.</td>
-      <td>Restringir El sistema te da error si intentás eliminar un equipo que ya disputó temporadas, porque dejarías el fixture y los resultados sin uno de los rivales.</td>
+      <td>Restringir No podés anotar a un grupo de chicos para que jueguen en "Boca Juniors" si el club "Boca" no existe creado en el sistema.</td>
+      <td>Cascada Si un club cambia de nombre (ej. de "Fútbol Club" a "Atlético Club"), el nombre nuevo se actualiza solo en todas las listas del campeonato.</td>
+      <td>Restringir Te dará un error si intentás borrar a un equipo que ya jugó el torneo, porque dejarías el fixture y los partidos viejos con un rival vacío.</td>
     </tr>
     <tr>
       <td>Torneos</td>
       <td>Temporadas_Torneos_Grupos_Equipos_Jugadores</td>
-      <td>Restringir No podés asignar un plantel a competir si no elegís un torneo válido y vigente que esté creado en la tabla de Torneos.</td>
-      <td>Cascada Si el torneo se renombra (por ejemplo, pasa de llamarse "Torneo Apertura" a "Copa de Campeones"), el cambio se refleja solo en las planillas.</td>
-      <td>Restringir No se puede borrar un torneo que ya se jugó o que tiene planteles inscriptos, ya que se perdería toda la estadística histórica de las posiciones.</td>
+      <td>Restringir No podés meter a un equipo a competir en el "Torneo Salteño" si ese torneo no está creado en la tabla de Torneos.</td>
+      <td>Cascada Si el torneo cambia de sponsor y pasa a llamarse "Torneo Coca-Cola", el nombre se acomoda solo en todas las planillas de inscripción.</td>
+      <td>Restringir Queda prohibido borrar un torneo que ya se jugó o que ya tiene equipos anotados, porque se rompería toda la tabla de posiciones histórica.</td>
     </tr>
     <tr>
       <td>Grupos</td>
       <td>Temporadas_Torneos_Grupos_Equipos_Jugadores</td>
-      <td>Restringir Para definir en qué zona juega un futbolista, el grupo (ej. "Zona A") debe estar creado de antemano en el sistema.</td>
-      <td>Cascada Si la organización decide cambiarle el código o nombre a una zona, los planteles asignados se reubican de forma automática bajo la nueva descripción.</td>
-      <td>Restringir No podés eliminar un grupo del campeonato si todavía tiene equipos y jugadores anotados compitiendo en él.</td>
+      <td>Restringir No podés poner que un jugador va a jugar en la "Zona A" si antes no creaste la "Zona A" en la tabla de Grupos.</td>
+      <td>Cascada Si los organizadores deciden cambiarle el nombre a la "Zona A" por "Grupo de Oro", los jugadores anotados se mueven solos al nuevo nombre.</td>
+      <td>Restringir No podés eliminar un Grupo si todavía quedan equipos y jugadores anotados ahí adentro listos para jugar el fin de semana.</td>
     </tr>
     <tr>
       <td>Temporadas</td>
       <td>Temporadas_Torneos_Grupos_Equipos_Jugadores</td>
-      <td>Restringir No se puede inscribir a nadie a competir en un año o período que no esté habilitado en la tabla de Temporadas.</td>
-      <td>Cascada Cualquier corrección en las fechas límites o el identificador de la temporada padre se acomoda solo en los registros de juego.</td>
-      <td>Restringir Se bloquea la eliminación de una temporada vieja (ej. "Año 2025") si contiene las listas de buena fe y las estadísticas de ese año.</td>
+      <td>Restringir No podés inscribir a nadie para jugar en la temporada "Año 2026" si esa temporada no está habilitada en el calendario del sistema.</td>
+      <td>Cascada Cualquier cambio en las fechas de la temporada padre se actualiza automáticamente en los registros de las planillas de juego hijo.</td>
+      <td>Restringir No podés borrar una temporada vieja (como el "Año 2025") si todavía tiene adentro guardadas las listas de quiénes jugaron ese año.</td>
     </tr>
 
   </tbody>
