@@ -66,6 +66,35 @@
       <td>Cascada Si el torneo cambia el nombre "Torneo Águila" a "Torneo raton", el registro del traspaso de Pablo Rodríguez se actualizará automáticamente para decir que se realizó bajo el nuevo nombre . </td>
       <td>Restringir No puedo eliminar un Torneo si ya existen Traspasos de jugadores registrados, porque forman parte del historial del campeonato. </td>
     </tr>
+    
+    <tr>
+      <td>Premios_Grupales</td>
+      <td>Premios_Equipos</td>
+      <td>Restringir No puedes asignarle un premio a un club si antes no creaste la definición o categoría del premio (como "Fair Play") en la tabla de premios grupales.</td>
+      <td>Cascada Si modificás el código de barra o identificador del premio grupal en la tabla padre, todas las copas asignadas a los equipos se actualizan solas.</td>
+      <td>Restringir No te deja eliminar el premio "Fair Play" de la lista maestra si ya figura que un equipo se lo ganó en campeonatos anteriores.</td>
+    </tr>
+    <tr>
+      <td>Premios_Individuales</td>
+      <td>Premios_Jugadores</td>
+      <td>Restringir No podés registrar que un jugador ganó una distinción si el tipo de premio (ej. "Goleador Estrella") no existe en las listas del torneo.</td>
+      <td>Cascada Si el administrador corrige el nombre o código del premio individual, el cambio impacta de inmediato en el historial de los futbolistas premiados.</td>
+      <td>Restringir No podés borrar la categoría de premio "Mejor Arquero" de la tabla padre si ya hay jugadores que lo tienen guardado en sus estadísticas.</td>
+    </tr>
+    <tr>
+      <td>Equipos</td>
+      <td>Premios_Equipos</td>
+      <td>Restringir No es posible otorgarle un trofeo a un equipo cuyo nombre o ID no esté registrado oficialmente en el sistema.</td>
+      <td>Cascada Si por algún cambio del sistema se modifica el identificador único de un equipo, sus trofeos ganados se reasocian automáticamente con su nuevo ID.</td>
+      <td>Restringir El sistema te bloquea si intentás eliminar por completo a un equipo histórico que todavía tiene copas registradas en su vitrina.</td>
+    </tr>
+    <tr>
+      <td>Tablas Padres (Jugador/Equipo/Torneo)</td>
+      <td>Temporadas_Torneos_Grupos_Equipos_Jugadores</td>
+      <td>Restringir No podés meter a un jugador en la planilla de buena fe si ese jugador, su equipo o el torneo actual no existen dados de alta previamente.</td>
+      <td>Cascada Si se corrige el documento de identidad de un jugador o el código de su grupo, la tabla gigante se actualiza al instante en todo el fixture.</td>
+      <td>Restringir Queda totalmente prohibido borrar un jugador o un torneo si ya jugaron partidos y figuran registrados en esta lista grande, porque arruinarías la tabla de posiciones histórica.</td>
+    </tr>
 
   </tbody>
 </table>
