@@ -145,6 +145,34 @@
       <td>Cascada:cualquier modificación en los datos del predio (nombre, dirección o disponibilidad) se actualiza automáticamente en los partidos asociados.</td>
       <td>Restringir: no se puede borrar un predio si es que hay partidos que se juegan en ese predio</td>
     </tr>
+    <tr>
+      <td>Partidos</td>
+      <td>Resultados</td>
+      <td>Restringir: No puedes crear un resultado si antes no existe el partido correspondiente primero debe existir el partido</td>
+      <td>Cascada: Si cambia el ID del partido, todos los resultados relacionados se actualizarán automáticamente</td>
+      <td>Cascada: Si eliminas un partido, también se eliminarán automáticamente sus resultados relacionados</td>
+    <tr>
+      <td>Entrenadores</td>
+      <td>Temporadas_torneos_grupos_equipos_jugadores</td>
+      <td>Restringir: No puedes asignar un entrenador a un torneo o equipos si el entrenador no existe previamente</td>
+      <td>Cascada: Si cambia el ID del entrenador, los registros relacionados se actualizarán automáticamente</td>
+      <td>Restringir: No puedes eliminar un entrenador mientras siga relacionado con equipos o torneos registrados</td>
+    </tr>
+    <tr>
+     <td>Jugadores</td>
+     <td>Planillas</td>
+     <td>Restringir: No puedes crear una planilla con un jugador que no exista primero debe existir el jugador</td>
+     <td>Cascada: Si cambia el ID del jugador, las planillas relacionadas se actualizarán automáticamente</td>
+     <td>Restringir: No puedes eliminar un jugador mientras siga apareciendo en planillas registradas</td>
+    </tr>
+    <tr>
+     <td>Partidos</td>
+     <td>Planillas</td>
+     <td>Restringir: No puedes crear una planilla si antes no existe el partido</td>
+     <td>Cascada: Si cambia el ID del partido, las planillas relacionadas se actualizarán automáticamente</td>
+     <td>Cascada: Si eliminas un partido, también se eliminarán automáticamente las planillas relacionadas</td>
+    </tr>
+
 
   </tbody>
 </table>
