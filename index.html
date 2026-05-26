@@ -145,6 +145,28 @@
       <td>Cascada:cualquier modificación en los datos del predio (nombre, dirección o disponibilidad) se actualiza automáticamente en los partidos asociados.</td>
       <td>Restringir: no se puede borrar un predio si es que hay partidos que se juegan en ese predio</td>
     </tr>
+    <tr>
+      <td>temporada</td>
+      <td>fecha</td>
+      <td>Restringir:No puedes crear una Fecha  si no la asocias a una Temporada existente.</td>
+      <td>Cascada: Si cambia el identificador o código de la Temporada, las Fechas hijas se actualizan solas.</td>
+      <td>Restringir: No puedes borrar una Temporada "2026" si ya tiene Fechas registradas.</td>
+    </tr>
+    <tr>
+      <td>fecha</td>
+      <td>partido</td>
+      <td>Restringir:No puedo crear el partido "cebollitas vs. las moritas" si antes no has creado la "Fecha "</td>
+      <td>Cascada: Si cambias el nombre o número de la fecha de "Fecha 1" a "Fecha Inaugural", todos sus partidos asociados se actualizarán solos para mostrar que pertenecen a la nueva denominación</td>
+      <td>Restringir: Si cambias el nombre o número de la fecha de "Fecha 1" a "Fecha Inaugural", todos sus partidos asociados se actualizarán solos para mostrar que pertenecen a la nueva denominación</td>
+    </tr>
+    <tr>
+      <td>predio</td>
+      <td>partido</td>
+      <td>Restringir:No puedes programar el partido "cebollitas vs. moritas" si antes no has registrado el predio "Estadio Central". Primero debe existir el lugar físico.</td>
+      <td>Cascada:Si cambias el nombre del predio de "Estadio Central" a "Estadio Nacional", todos los partidos programados allí se actualizarán solos para mostrar la nueva ubicación </td>
+      <td>Restringi: si intento borrar el predio "Estadio Nacional" mientras sigan guardados partidos que se van a jugar o que ya se jugaron en ese lugar</td>
+    </tr>
+
 
   </tbody>
 </table>
